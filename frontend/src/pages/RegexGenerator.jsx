@@ -13,7 +13,7 @@ export default function RegexGenerator() {
     setError(null);
 
     try {
-      const res = await fetch("/api/ai/process", {
+      const res = await fetch("https://devtoolbox-ai-production.up.railway.app/api/ai/process", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ tool: "regex", userInput: input }),
